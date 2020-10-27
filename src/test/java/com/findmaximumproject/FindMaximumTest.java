@@ -13,13 +13,13 @@ public class FindMaximumTest {
     }
     @Test
     public void given3Integers_WithMaxAtPosition2_ShouldReturnSameIntegerAsMaximum() {
-        FindMaximum findMaximum = new FindMaximum(5 , 6 ,2);
+        FindMaximum findMaximum = new FindMaximum(5 , 6 , 2);
         int maximum = findMaximum.calculateMaximum();
         Assert.assertEquals(6 , maximum);
     }
     @Test
     public void given3Integers_WithMaxAtPosition3_ShouldReturnSameIntegerAsMaximum() {
-        FindMaximum findMaximum = new FindMaximum(5 , 2 ,6);
+        FindMaximum findMaximum = new FindMaximum(5 , 2 , 6);
         int maximum = findMaximum.calculateMaximum();
         Assert.assertEquals(6 , maximum);
     }
