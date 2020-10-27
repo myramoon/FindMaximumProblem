@@ -1,4 +1,4 @@
-/* Purpose: To find maximum among 3 integers*/
+/* Purpose: To find maximum among 3 strings*/
 package com.findmaximumproject;
 import org.junit.Assert;
 import org.junit.Test;
@@ -41,5 +41,24 @@ public class FindMaximumTest {
         FindMaximum findMaximum = new FindMaximum();
         Float maximum = findMaximum.calculateMaximumOf3Floats(5.2f , 2.5f , 6.4f);
         Assert.assertEquals(java.util.Optional.of(6.4f), java.util.Optional.of(maximum));
+    }
+
+    @Test
+    public void given3Strings_WithMaxAtPosition1_ShouldReturnSameStringAsMaximum() {
+        FindMaximum findMaximum = new FindMaximum();
+        String maximum = findMaximum.calculateMaximumOf3Strings("pear" , "apple" , "orange");
+        Assert.assertEquals("pear" ,maximum);
+    }
+    @Test
+    public void given3Strings_WithMaxAtPosition2_ShouldReturnSameStringAsMaximum() {
+        FindMaximum findMaximum = new FindMaximum();
+        String maximum = findMaximum.calculateMaximumOf3Strings("apple" , "pear" , "orange");
+        Assert.assertEquals("pear" ,maximum);
+    }
+    @Test
+    public void given3Strings_WithMaxAtPosition3_ShouldReturnSameStringAsMaximum() {
+        FindMaximum findMaximum = new FindMaximum();
+        String maximum = findMaximum.calculateMaximumOf3Strings("apple" , "orange" , "pear");
+        Assert.assertEquals("pear" ,maximum);
     }
 }
