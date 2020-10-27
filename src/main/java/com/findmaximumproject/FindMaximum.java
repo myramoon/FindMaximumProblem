@@ -1,37 +1,16 @@
-/* Purpose: Add code to find maximum among 3 strings*/
+/* Purpose: To find maximum among 3 integers, floats and strings through 1 generic method*/
 package com.findmaximumproject;
 
-public class FindMaximum {
+public class FindMaximum<E extends Comparable<E>> {
 
-    public Integer calculateMaximumOf3Integers(Integer x , Integer y , Integer z) {
-        Integer max = x;
-        if(y.compareTo(max) > 0) {
-            max = y;
+    //Generic method for comparing different data types
+    public <E extends Comparable> E calculateMaximum(E[] inputArray) {
+        E max = inputArray[0];
+        if(inputArray[1].compareTo(max) > 0) {
+            max = inputArray[1];
         }
-        if(z.compareTo(max) > 0){
-            max = z;
-        }
-        return max;
-    }
-
-    public Float calculateMaximumOf3Floats(Float x , Float y , Float z) {
-        Float max = x;
-        if(y.compareTo(max) > 0) {
-            max = y;
-        }
-        if(z.compareTo(max) > 0){
-            max = z;
-        }
-        return max;
-    }
-
-    public String calculateMaximumOf3Strings(String x , String y , String z) {
-        String max = x;
-        if(y.compareTo(max) > 0) {
-            max = y;
-        }
-        if(z.compareTo(max) > 0){
-            max = z;
+        if(inputArray[2].compareTo(max) > 0){
+            max = inputArray[2];
         }
         return max;
     }
