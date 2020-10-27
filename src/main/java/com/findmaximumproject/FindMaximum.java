@@ -1,16 +1,28 @@
-/* Purpose: To find maximum among 3 integers, floats and strings through 1 generic method*/
+/* Purpose: To find maximum among 3 integers, floats and strings through 1 generic class*/
 package com.findmaximumproject;
 
 public class FindMaximum<E extends Comparable<E>> {
 
+    E x , y , z;
+
+    public  FindMaximum(E x , E y ,E z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    //method to pass generic values to static method for comparison
+    public E calculateMaximum() {
+        return FindMaximum.calculateMaximum(x , y , z);
+    }
     //Generic method for comparing different data types
-    public <E extends Comparable> E calculateMaximum(E[] inputArray) {
-        E max = inputArray[0];
-        if(inputArray[1].compareTo(max) > 0) {
-            max = inputArray[1];
+    public static <E extends Comparable> E calculateMaximum(E x , E y , E z) {
+        E max = x;
+        if(y.compareTo(max) > 0) {
+            max = y;
         }
-        if(inputArray[2].compareTo(max) > 0){
-            max = inputArray[2];
+        if(z.compareTo(max) > 0){
+            max = z;
         }
         return max;
     }
